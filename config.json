@@ -1,0 +1,93 @@
+{
+  "log": {
+    "loglevel": "warning"
+  },
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "BLOCK",
+        "domain": [
+          "domain:thepiratebay.org",
+          "domain:1337x.to",
+          "domain:rarbg.to",
+          "domain:nyaa.si",
+          "domain:yts.mx",
+          "domain:torlock.com",
+          "domain:zoink.ch",
+          "domain:tracker.opentrackr.org",
+          "domain:tracker.openbittorrent.com"
+        ]
+      },
+      {
+        "type": "field",
+        "outboundTag": "BLOCK",
+        "protocol": ["bittorrent"]
+      },
+      {
+        "ip": ["geoip:private"],
+        "outboundTag": "BLOCK",
+        "type": "field"
+      }
+    ]
+  },
+  "inbounds": [
+{
+  "tag": "VLESS + TCP + REALITY",
+  "listen": "0.0.0.0",
+  "port": 2053,
+  "protocol": "vless",
+  "settings": {
+    "clients": [{
+        "id": "8f51bd73-5197-42e2-9f63-e2bdbe5cfe06"
+    }],
+    "decryption": "none"
+  },
+  "streamSettings": {
+    "network": "tcp",
+    "tcpSettings": {},
+    "security": "reality",
+    "realitySettings": {
+      "show": false,
+      "dest": "www.openstreetmap.org:443",
+      "xver": 0,
+      "serverNames": [
+        "www.openstreetmap.org"
+      ],
+      "privateKey": "$PRIVATE",
+      "publicKey": "$PUBLIC",
+      "shortIds": [
+        "d80095b87e706969"
+      ]
+    }
+  },
+  "sniffing": {
+    "enabled": true,
+    "destOverride": ["http", "tls"]
+  }
+},
+    {
+      "port": 2080,
+      "listen": "0.0.0.0",
+      "protocol": "vless",
+      "settings": {
+        "clients": [
+          {
+            "id": "8f51bd73-5197-42e2-9f63-e2bdbe5cfe06"
+          }
+        ],
+        "decryption": "none"
+      },
+      "streamSettings": {
+        "network": "tcp"
+      },
+      "tag": "vless-in"
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "tag": "DIRECT"
+    }
+  ]
+}
