@@ -44,7 +44,7 @@
 "settings": {
 "clients": [
 {
-"id": "8f51bd73-5197-42e2-9f63-e2bdbe5cfe06"
+"id": "esgard"
 }
 ],
 "decryption": "none"
@@ -55,10 +55,10 @@
 "security": "reality",
 "realitySettings": {
 "show": false,
-"dest": "zhaket.com:443",
+"dest": "kifpool.me:443",
 "xver": 0,
 "serverNames": [
-"zhaket.com"
+"kifpool.me"
 ],
 "privateKey": "kJEYVV2BsRIxv2_KofFQsFHJXecbl233EdQcc-iWcFM",
 "publicKey": "tv4idxKiDI8SkHFu0p6YL6VGHMAp2XWxYpXltkG1qx0",
@@ -82,7 +82,7 @@
 "settings": {
 "clients": [
 {
-"id": "8f51bd73-5197-42e2-9f63-e2bdbe5cfe06"
+"id": "esgard"
 }
 ],
 "decryption": "none"
