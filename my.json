@@ -39,7 +39,7 @@
 {
 "tag": "VLESS + TCP + REALITY",
 "listen": "0.0.0.0",
-"port": 2053,
+"port": 4450,
 "protocol": "vless",
 "settings": {
 "clients": [
@@ -60,8 +60,8 @@
 "serverNames": [
 "zhaket.com"
 ],
-"privateKey": "$PRIVATE",
-"publicKey": "$PUBLIC",
+"privateKey": "kJEYVV2BsRIxv2_KofFQsFHJXecbl233EdQcc-iWcFM",
+"publicKey": "tv4idxKiDI8SkHFu0p6YL6VGHMAp2XWxYpXltkG1qx0",
 "shortIds": [
 "bfd3cc17"
 ]
